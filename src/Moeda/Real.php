@@ -1,23 +1,13 @@
 <?php
 namespace Vieira\Boleto\Moeda;
 
-use Vieira\Boleto\Moeda\Contratos\Moeda;
-
 class Real implements Moeda
 {
     /**
-     * @return int Retorna o código da moeda
+     * @inheritdoc
      */
-    function getCodigo()
+    public function toString()
     {
-        return 1;
-    }
-
-    /**
-     * @return string Retorna a string da moeda
-     */
-    function getEspecie()
-    {
-        return "dinheiro";
+        return "REAL";
     }
 }

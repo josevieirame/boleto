@@ -1,8 +1,7 @@
 <?php
 namespace Vieira\Boleto\Banco;
 
-
-use Vieira\Boleto\Moeda\Contratos\Moeda;
+use Vieira\Boleto\Moeda\Moeda;
 use Vieira\Boleto\Moeda\Real;
 
 class Caixa extends Banco
