@@ -21,7 +21,7 @@ abstract class Banco
     abstract public function getCodigo();
 
     /*
-     * @return Vieira/Boleto/Moeda/Moeda
+     * @return Moeda
      */
     abstract public function getMoedaEmUso();
 }
