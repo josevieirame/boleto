@@ -35,6 +35,8 @@ class Calculo
     {
         $numeroTotal10 = 0;
         $fator = 2;
+        $numeros= [];
+        $parcial10 = [];
 
         //  Separacao dos numeros.
         for ($i = strlen($num); $i > 0; $i--) {
@@ -44,21 +46,21 @@ class Calculo
             //  Efetua multiplicacao do numero pelo (falor 10).
             $temp = $numeros[$i] * $fator;
             $temp0 = 0;
+
             foreach (preg_split('// ',$temp,-1,PREG_SPLIT_NO_EMPTY) as $v) {
-                $temp0+=$v;
+                $temp0 += $v;
             }
 
             $parcial10[$i] = $temp0;
 
-            //  Monta sequencia para soma dos digitos no (modulo 10).
             $numeroTotal10 += $parcial10[$i];
-            $fator = ($fator == 2) ? 1 : 2;
+            $fator = ($fator === 2) ? 1 : 2;
         }
 
         $remainder  = $numeroTotal10 % 10;
         $digito = 10 - $remainder;
 
-        $digito = ($digito == 10) ? 0 : $digito;
+        $digito = ($digito === 10) ? 0 : $digito;
 
         return $digito;
     }
@@ -74,10 +76,10 @@ class Calculo
     public static function modulo11($num, $base=9)
     {
         $fator = 2;
-
         $soma  = 0;
+        $numeros = [];
+        $parcial = [];
 
-        // Separacao dos numeros.
         for ($i = strlen($num); $i > 0; $i--) {
             //  Pega cada numero isoladamente.
             $numeros[$i] = substr($num,$i-1,1);
@@ -85,14 +87,14 @@ class Calculo
             $parcial[$i] = $numeros[$i] * $fator;
             //  Soma dos digitos.
             $soma += $parcial[$i];
-            if ($fator == $base) {
+            if ($fator === $base) {
                 //  Restaura fator de multiplicacao para 2.
                 $fator = 1;
             }
             $fator++;
         }
 
-        $digito = (($soma * 10) % 11 == 10) ? 0 : ($soma * 10) % 11;
+        $digito = (($soma * 10) % 11 === 10) ? 0 : ($soma * 10) % 11;
         $resto = $soma % 11;
 
         return compact('digito', 'resto');
