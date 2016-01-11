@@ -1,13 +1,33 @@
 <?php
 
-namespace Vieira\Boleto\Banco;
+namespace Vieira\Boleto;
+
+use Exception;
 
 class Calculo
 {
     /**
+     * Helper para Zerofill (0 à esquerda).
+     * O valor não deve ter mais caracteres do que o número de dígitos especificados
+     *
+     * @param int $valor
+     * @param int $digitos
+     * @return string
+     * @throws Exception
+     */
+    public static function zeroFill($valor, $digitos)
+    {
+        if (strlen($valor) > $digitos) {
+            throw new Exception("O valor {$valor} possui mais de {$digitos} dígitos!");
+        }
+
+        return str_pad($valor, $digitos, '0', STR_PAD_LEFT);
+    }
+
+    /**
      * Calcula e retorna o dígito verificador usando o algoritmo Modulo 10
      *
-     * @param string $num
+     * @param integer|string $num
      * @see Documentação em http://www.febraban.org.br/Acervo1.asp?id_texto=195&id_pagina=173&palavra=
      * @return int
      */
@@ -46,8 +66,8 @@ class Calculo
     /**
      * Calcula e retorna o dígito verificador usando o algoritmo Modulo 11
      *
-     * @param string $num
-     * @param int $base
+     * @param integer|string $num
+     * @param integer $base
      * @see Documentação em http://www.febraban.org.br/Acervo1.asp?id_texto=195&id_pagina=173&palavra=
      * @return array Retorna um array com as chaves 'digito' e 'resto'
      */
