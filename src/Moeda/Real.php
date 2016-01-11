@@ -6,7 +6,7 @@ class Real implements Moeda
     /**
      * @inheritdoc
      */
-    public function toString()
+    public function getDescricao()
     {
         return "REAL";
     }

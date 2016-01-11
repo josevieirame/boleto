@@ -12,7 +12,7 @@ class Caixa extends Banco
     private $moedaEmUso;
 
     /**
-     * Caixa constructor.
+     * Caixa constructor
      */
     public function __construct()
     {
