@@ -1,11 +1,10 @@
 # Boleto
 
-[![Latest Version](https://img.shields.io/github/release/vieirasantosn/boleto.svg?style=flat-square)](https://github.com/vieirasantosn/boleto/releases)
+[![Latest Version](https://img.shields.io/github/release/josevieirame/boleto.svg?style=flat-square)](https://github.com/josevieirame/boleto/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Build Status](https://img.shields.io/travis/vieirasantosn/boleto/master.svg?style=flat-square)](https://travis-ci.org/vieirasantosn/boleto)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vieirasantosn/boleto.svg?style=flat-square)](https://scrutinizer-ci.com/g/vieirasantosn/boleto/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vieirasantosn/boleto.svg?style=flat-square)](https://scrutinizer-ci.com/g/vieirasantosn/boleto)
-[![Total Downloads](https://img.shields.io/packagist/dt/vieira/boleto.svg?style=flat-square)](https://packagist.org/packages/vieira/boleto)
+[![Build Status](https://img.shields.io/travis/josevieirame/boleto/master.svg?style=flat-square)](https://travis-ci.org/josevieirame/boleto)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/josevieirame/boleto.svg?style=flat-square)](https://scrutinizer-ci.com/g/josevieirame/boleto/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/josevieirame/boleto.svg?style=flat-square)](https://scrutinizer-ci.com/g/josevieirame/boleto)
 
 This package is compliant with [PSR-1], [PSR-2] and [PSR-4]. If you notice compliance oversights,
 please send a patch via pull request.
@@ -46,7 +45,7 @@ $ vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/vieirasantosn/boleto/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/josevieirame/boleto/blob/master/CONTRIBUTING.md) for details.
 
 ## License
 
