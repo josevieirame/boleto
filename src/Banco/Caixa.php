@@ -1,4 +1,5 @@
 <?php
+
 namespace Vieira\Boleto\Banco;
 
 use Vieira\Boleto\Moeda\Moeda;
@@ -12,7 +13,7 @@ class Caixa extends Banco
     private $moedaEmUso;
 
     /**
-     * Caixa constructor
+     * Caixa constructor.
      */
     public function __construct()
     {

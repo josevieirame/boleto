@@ -1,19 +1,22 @@
 <?php
+
 namespace Vieira\Boleto\Banco;
 
 abstract class Banco
 {
     /**
-     * O path completo do arquivo de layout a ser usado
+     * O path completo do arquivo de layout a ser usado.
+     *
      * @var string
      */
-    protected $layout = __DIR__ . DIRECTORY_SEPARATOR . 'default.phtml';
+    protected $layout = __DIR__.DIRECTORY_SEPARATOR.'default.phtml';
 
     /**
-     * O path completo do arquivo da logo a ser usado
+     * O path completo do arquivo da logo a ser usado.
+     *
      * @var string
      */
-    protected $logo = __DIR__ . DIRECTORY_SEPARATOR . 'logo.png';
+    protected $logo = __DIR__.DIRECTORY_SEPARATOR.'logo.png';
 
     /**
      * @return string

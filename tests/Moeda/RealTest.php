@@ -1,4 +1,5 @@
 <?php
+
 namespace Moeda;
 
 use Vieira\Boleto\Moeda\Moeda;
