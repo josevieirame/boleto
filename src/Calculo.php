@@ -8,12 +8,14 @@ class Calculo
 {
     /**
      * Helper para Zerofill (0 à esquerda).
-     * O valor não deve ter mais caracteres do que o número de dígitos especificados
+     * O valor não deve ter mais caracteres do que o número de dígitos especificados.
      *
      * @param int $valor
      * @param int $digitos
-     * @return string
+     *
      * @throws Exception
+     *
+     * @return string
      */
     public static function zeroFill($valor, $digitos)
     {
@@ -25,29 +27,31 @@ class Calculo
     }
 
     /**
-     * Calcula e retorna o dígito verificador usando o algoritmo Modulo 10
+     * Calcula e retorna o dígito verificador usando o algoritmo Modulo 10.
      *
-     * @param integer|string $num
+     * @param int|string $num
+     *
      * @see Documentação em http://www.febraban.org.br/Acervo1.asp?id_texto=195&id_pagina=173&palavra=
+     *
      * @return int
      */
     public static function modulo10($num)
     {
         $numeroTotal10 = 0;
         $fator = 2;
-        $numeros= [];
+        $numeros = [];
         $parcial10 = [];
 
         //  Separacao dos numeros.
         for ($i = strlen($num); $i > 0; $i--) {
             //  Pega cada numero isoladamente.
-            $numeros[$i] = substr($num,$i-1,1);
+            $numeros[$i] = substr($num, $i - 1, 1);
 
             //  Efetua multiplicacao do numero pelo (falor 10).
             $temp = $numeros[$i] * $fator;
             $temp0 = 0;
 
-            foreach (preg_split('// ',$temp,-1,PREG_SPLIT_NO_EMPTY) as $v) {
+            foreach (preg_split('// ', $temp, -1, PREG_SPLIT_NO_EMPTY) as $v) {
                 $temp0 += $v;
             }
 
@@ -57,7 +61,7 @@ class Calculo
             $fator = ($fator === 2) ? 1 : 2;
         }
 
-        $remainder  = $numeroTotal10 % 10;
+        $remainder = $numeroTotal10 % 10;
         $digito = 10 - $remainder;
 
         $digito = ($digito === 10) ? 0 : $digito;
@@ -66,23 +70,25 @@ class Calculo
     }
 
     /**
-     * Calcula e retorna o dígito verificador usando o algoritmo Modulo 11
+     * Calcula e retorna o dígito verificador usando o algoritmo Modulo 11.
      *
-     * @param integer|string $num
-     * @param integer $base
+     * @param int|string $num
+     * @param int        $base
+     *
      * @see Documentação em http://www.febraban.org.br/Acervo1.asp?id_texto=195&id_pagina=173&palavra=
+     *
      * @return array Retorna um array com as chaves 'digito' e 'resto'
      */
-    public static function modulo11($num, $base=9)
+    public static function modulo11($num, $base = 9)
     {
         $fator = 2;
-        $soma  = 0;
+        $soma = 0;
         $numeros = [];
         $parcial = [];
 
         for ($i = strlen($num); $i > 0; $i--) {
             //  Pega cada numero isoladamente.
-            $numeros[$i] = substr($num,$i-1,1);
+            $numeros[$i] = substr($num, $i - 1, 1);
             //  Efetua multiplicacao do numero pelo falor.
             $parcial[$i] = $numeros[$i] * $fator;
             //  Soma dos digitos.

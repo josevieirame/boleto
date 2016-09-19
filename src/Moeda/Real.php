@@ -1,13 +1,14 @@
 <?php
+
 namespace Vieira\Boleto\Moeda;
 
 class Real implements Moeda
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getDescricao()
     {
-        return "REAL";
+        return 'REAL';
     }
 }

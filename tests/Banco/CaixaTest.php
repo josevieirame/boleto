@@ -2,7 +2,6 @@
 
 namespace Vieira\Boleto\Test\Banco;
 
-
 use Vieira\Boleto\Banco\Banco;
 use Vieira\Boleto\Banco\Caixa;
 

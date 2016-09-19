@@ -1,4 +1,5 @@
 <?php
+
 namespace Vieira\Boleto\Test;
 
 use Vieira\Boleto\Calculo;

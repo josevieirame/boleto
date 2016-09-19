@@ -1,4 +1,5 @@
 <?php
+
 namespace Vieira\Boleto\Moeda;
 
 interface Moeda
